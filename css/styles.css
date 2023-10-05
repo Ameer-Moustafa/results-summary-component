@@ -1,0 +1,317 @@
+/* CSS reset */
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+/* Font Import
+   Hanken Grotesk - 500, 700, 800
+*/
+   
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* Color variables */
+
+:root {
+   /* Primary */
+   --light-red: hsl(0, 100%, 67%);
+   --orangey-yellow: hsl(39, 100%, 56%);
+   --green-teal: hsl(166, 100%, 37%);
+   --cobalt-blue: hsl(234, 85%, 45%);
+
+   /* Gradients */
+
+   /* Background */
+   --light-slate-blue: hsl(252, 100%, 67%);
+   --light-royal-blue: hsl(241, 81%, 54%);
+   /* circle */
+   --violet-blue: hsla(256, 72%, 46%, 1);
+   --persian-blue: hsla(241, 72%, 46%, 0);
+
+   /* Neutral */
+   --white: hsl(0, 0%, 100%);
+   --pale-blue: hsl(221, 100%, 96%);
+   --light-lavender: hsl(241, 100%, 89%);
+   --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+
+/* Main parent container */
+
+.parent-container {
+   display: flex;
+   gap: 1rem;
+   flex-direction: column;
+   text-align: center;
+   font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Results splash styles */
+
+.results-splash {
+   padding: 1.3rem 2rem;
+   padding-bottom: 2.5rem;
+   background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+   display: flex;
+   flex-direction: column;
+   align-content: space-around;
+   gap: 2rem;
+   border-bottom-left-radius: 30px;
+   border-bottom-right-radius: 30px;
+}
+
+
+.results-splash h1 {
+   font-size: 0.9rem;
+   font-weight: 800;
+   color: var(--light-lavender);
+}
+
+.results-splash span {
+   font-size: 1.3rem;
+   font-weight: 700;
+   color: var(--white);
+}
+
+.results-splash p {
+   max-width: 90%;
+   margin-top: -1rem;
+   align-self: center;
+   font-size: 0.9rem;
+   font-weight: 500;
+   color: var(--light-lavender);
+}
+
+/* results circle */
+
+.results-circle {
+   align-self: center;
+   border-radius: 50%;
+   background: linear-gradient(var(--violet-blue), var(--persian-blue));
+   width: 30%;
+   padding: 1.5rem;
+}
+
+.results-circle h2 {
+   font-size: 3.3rem;
+   font-weight: 800;
+   color: var(--pale-blue);
+}
+
+.results-circle span {
+   font-size: 0.8rem;
+   font-weight: 500;
+   color: var(--light-lavender);
+}
+
+/* results summary parent styles */
+
+.results-summary-parent {
+   display: flex;
+   gap: 1.5rem;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 1rem 1.5rem;
+}
+
+.results-summary-parent h2 {
+   align-self: start;
+   font-size: 1rem;
+   color: var(--dark-gray-blue);
+}
+
+/* results container  Styles */
+
+.results-container {
+   width: 100%;
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   gap: 1rem;
+}
+
+/* universal result component styles */
+
+.result {
+   min-width: 90%;
+   border-radius: 10px;
+   padding: 1rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+.result-name {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.result-name span {
+   font-size: 0.9rem;
+   font-weight: 700;
+}
+
+.result-score {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+.result-font {
+   color: var(--dark-gray-blue);
+   font-weight: 800;
+}
+
+.overall-score {
+   color: grey;
+   font-weight: 500;
+}
+
+/* specific result component styles */
+
+/* Reaction container */
+
+.Reaction-container {
+   background-color: hsla(0, 100%, 67%, 0.1)
+}
+
+.Reaction-container .result-name span {
+   color: var(--light-red);
+}
+
+/* memory container */
+
+.Memory-container {
+   background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.Memory-container .result-name span {
+   color: var(--orangey-yellow);
+}
+
+/* verbal container */
+
+.Verbal-container {
+   background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.Verbal-container .result-name span {
+   color: var(--green-teal);
+}
+
+/* visual container */
+
+.Visual-container {
+   background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.Visual-container .result-name span {
+   color: var(--cobalt-blue);
+}
+
+/* button */
+
+button {
+   align-self: center;
+   border: none;
+   font-size: 1rem;
+   font-weight: 700;
+   color: var(--white);
+   background-color: var(--dark-gray-blue);
+   border-radius: 30px;
+   padding: 1rem 8rem;
+}
+
+button:hover {
+   cursor: pointer;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+   body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: var(--pale-blue);
+   }
+   
+   .parent-container {
+      max-width: 85%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 0;
+      background-color: var(--white);
+      border-radius: 30px;
+      box-shadow: 2px 4px 15px 3px rgba(0,0,0,0.28);
+      
+
+   }
+
+   .results-splash {
+      gap: 2.5rem;
+      max-width: 85%;
+      border-radius: 30px;
+      padding: 3.9rem;
+      place-self: end;
+   }
+
+   .results-splash p {
+      max-width: unset;
+   }
+
+   .results-splash h1 {
+      font-size: 1.1rem;
+   }
+
+   .results-splash .great-span {
+      font-size: 2rem;
+   }
+
+   .results-circle {
+      width: 40%;
+      padding: 2rem;
+   }
+   
+   .results-summary-parent {
+      padding: 2rem;
+      gap: 2.5rem;
+
+   }
+
+   .results-summary-parent h2 {
+      font-size: 1.3rem;
+   }
+
+   button {
+      padding: 1rem 6rem;
+   }
+}
+
+/* Large Tablet */
+
+@media screen and (min-width: 1024px) {
+   .parent-container {
+      max-width: 67%;
+   }
+}
+
+/* Laptop */
+
+@media screen and (min-width: 1440px) {
+   .parent-container {
+      max-width: 48%;
+   }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1920px) {
+   .parent-container {
+      max-width: 36%;
+   }
+
+}
