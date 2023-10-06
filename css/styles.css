@@ -87,7 +87,7 @@
 /* results circle */
 
 .results-circle {
-   width: 45%;
+   max-width: 1000px;
    padding: 1.5rem;
    align-self: center;
    border-radius: 50%;
@@ -273,6 +273,7 @@ button:hover {
    }
 
    .results-circle {
+      max-width: 65%;
       width: 65%;
       padding: 2rem;
    }
